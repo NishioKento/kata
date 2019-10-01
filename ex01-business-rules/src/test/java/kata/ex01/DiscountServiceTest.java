@@ -14,8 +14,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * @author kawasima
  */
-public class DiscountServiceTest {
-    DiscountService discountService;
+class DiscountServiceTest {
+    private DiscountService discountService;
+
     private Driver driver(int usingCount) {
         Driver driver = new Driver();
         driver.setCountPerMonth(usingCount);
@@ -28,7 +29,7 @@ public class DiscountServiceTest {
     }
 
     @Test
-    public void test平日朝夕割引() {
+    void test平日朝夕割引() {
         HighwayDrive drive = new HighwayDrive();
         drive.setEnteredAt(LocalDateTime.of(2016, 3, 31, 23, 0));
         drive.setExitedAt(LocalDateTime.of(2016, 4, 1, 6, 30));
@@ -40,7 +41,7 @@ public class DiscountServiceTest {
     }
 
     @Test
-    public void test休日朝夕は休日割が適用される() {
+    void test休日朝夕は休日割が適用される() {
         HighwayDrive drive = new HighwayDrive();
         drive.setEnteredAt(LocalDateTime.of(2016, 4, 1, 23, 0));
         drive.setExitedAt(LocalDateTime.of(2016, 4, 2, 6, 30));

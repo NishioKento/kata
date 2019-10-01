@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Driver implements Serializable {
     private int countPerMonth;
 
-    public int getCountPerMonth() {
+    private int getCountPerMonth() {
         return this.countPerMonth;
     }
 

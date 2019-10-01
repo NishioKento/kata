@@ -17,23 +17,23 @@ public class HighwayDrive implements Serializable {
     public HighwayDrive() {
     }
 
-    public LocalDateTime getEnteredAt() {
+    private LocalDateTime getEnteredAt() {
         return this.enteredAt;
     }
 
-    public LocalDateTime getExitedAt() {
+    private LocalDateTime getExitedAt() {
         return this.exitedAt;
     }
 
-    public VehicleFamily getVehicleFamily() {
+    private VehicleFamily getVehicleFamily() {
         return this.vehicleFamily;
     }
 
-    public RouteType getRouteType() {
+    private RouteType getRouteType() {
         return this.routeType;
     }
 
-    public Driver getDriver() {
+    private Driver getDriver() {
         return this.driver;
     }
 
