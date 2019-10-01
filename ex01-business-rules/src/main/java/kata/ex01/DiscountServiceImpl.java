@@ -8,6 +8,8 @@ import kata.ex01.model.HighwayDrive;
 public class DiscountServiceImpl implements DiscountService {
     @Override
     public long calc(HighwayDrive drive) {
+
+        if (drive.isHoliday()) return 30;
         return 0;
     }
 }
